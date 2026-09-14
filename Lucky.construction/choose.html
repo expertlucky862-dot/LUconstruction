@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<style>
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.choose-container{
+    background-image:url("luckybackground.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-height:100vh;
+}
+
+.choose-nav{
+    display:flex;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.logo{
+    width:60px;
+    height:50px;
+    border-radius:10px;
+}
+
+.logo-text{
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(5, 5, 5);
+    font-weight:bold;
+    font-size:1.5rem;
+    margin-left:15px;
+}
+
+.luckylist{
+    display:flex;
+    list-style:none;
+    gap:20px;
+    margin-left:auto;
+}
+
+.luckylist li a{
+    position:relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    text-decoration:none;
+    color:rgba(255, 254, 254, 0.899);
+    padding:10px 15px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.luckylist li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0%;
+    height:2px;
+    background:rgb(252, 252, 255);
+    transition:width 0.3s ease;
+}
+
+.luckylist li a:hover::after{
+    width:100%;
+}
+
+
+.contact-dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.Contact-btn{
+    display: inline-block;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 12px 20px;
+    font-size: larger;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 180px;
+    background: rgba(16, 16, 16, 0.96);
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+
+.contact-menu.show{
+    display: flex;
+}
+
+.contact-menu a{
+    display:block;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255, 255, 255, 0.04);
+    transition: 0.3s ease;
+}
+
+.contact-menu a:hover{
+    background: rgba(255, 255, 255, 0.208);
+    transform: translateY(-1px);
+}
+
+.Contact-btn{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e7eaf100;
+    padding: 12px 20px;
+    font-size: larger;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Sliding underline for Contact button */
+.Contact-btn{
+    position: relative;
+    display: inline-block;
+}
+
+.Contact-btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 0%;
+    height: 2px;
+    background: rgb(252, 252, 255);
+    transition: width 0.25s ease;
+}
+
+.Contact-btn:hover::after,
+.Contact-btn[aria-expanded="true"]::after{
+    width: 100%;
+}
+
+.serve-hero{
+    min-height:calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-hero{
+    text-align:center;
+    background-color:rgba(0, 0, 0, 0.715);
+    color:rgb(255, 255, 255);
+    padding:40px;
+    border-radius:12px;
+    max-width:900px;
+    width:100%;
+}
+
+
+
+</style>
+<body>
+    <div class="choose-container">
+        <nav class="choose-nav">
+        <img src="luckywhitelog.jpeg" alt="Lucky Construction" style="width: 60px; height: 50px; border-radius: 10px;" >
+            <p class="logo-text">LUCKY CONSTRUCTION</p>
+            <ul class="luckylist">
+                <li><a href=".html">Home</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="choose.html">Why Choose Us</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+            </ul>
+
+            <div class="contact-dropdown">
+            <button class="Contact-btn" type="button" aria-expanded="false">Contact</button>
+            <div class="contact-menu">
+                <a href="tel:+2348036998930">Call Now</a>
+                <a href="mailto:luckyokungbowa66@gmail.com">Email Us</a>
+                <a href="https://wa.me/2348036998930" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <section class="serve-hero">
+            <div class="service-hero">
+
+                <h1 style="font-family: 'Montserrat', sans-serif; font-size:clamp(2rem,2vw,2rem); margin-bottom:20px;">YOUR TRUSTED CONSTRUCTION PARTNER</h1>
+                <p style="font-size: larger; font-family: 'Poppins', sans-serif ;">Combining Experience, Quality, and Reliability.</p>
+                <p style="font-size: larger; font-family: 'Poppins', sans-serif ;">We take pride in delivering exceptional results through skilled professionals, premium materials, and a customer-focused approach.</p>
+
+            </div>
+        </section>
+    </div>
+
+    </div>
+
+    <script>
+    const contactButton = document.querySelector('.Contact-btn');
+    const contactMenu = document.querySelector('.contact-menu');
+    if (contactButton && contactMenu) {
+        contactButton.addEventListener('click', function (event) {
+            event.stopPropagation();
+            const isOpen = contactMenu.classList.toggle('show');
+            contactButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.contact-dropdown')) {
+                contactMenu.classList.remove('show');
+                contactButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+</script>
+
+ </div>
+
+    <h1 style="margin-left: 40%; margin-top: 50px; margin-bottom: -15px;">WHY CHOOSE US</h1>
+
+    <div style="background-color: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.405); width: max(90%, 500px); margin: 80px auto; padding: 30px; border-radius: 15px;">
+        <p style="margin-left: 20px; font-size: xx-large;">QUALITY YOU CAN TRUST:</p>
+        <p style="margin-left: 20px; margin-top: 10px; font-size: x-large;">Experienced Professionals, Lucky Construction skilled team brings years of construction experience to every project.</p>
+        <img style="width: 90%; margin-left: 75px; margin-top: 15px; background-color: rgba(0, 0, 0, 0.252); box-shadow: 0 0 20px rgba(0, 0, 0, 0.271)" src="about6.png" alt="#">
+
+    </div>
+
+    <div style="background-color: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.405); width: max(90%, 500px); margin: 80px auto; padding: 30px; border-radius: 15px;">
+        <p style="margin-left: 20px; font-size: xx-large;">QUALITY MATERIALS:</p>
+        <p style="margin-left: 20px; margin-top: 10px; font-size: x-large;">Lucky Construction use durable and high-quality materials to ensure long-lasting results.</p>
+        <img style="width: 90%; margin-left: 75px; margin-top: 15px; background-color: rgba(0, 0, 0, 0.252); box-shadow: 0 0 20px rgba(0, 0, 0, 0.271)" src="about9.jpg" alt="#">
+
+    </div>
+
+     <div style="background-color: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.405); width: max(90%, 500px); margin: 80px auto; padding: 30px; border-radius: 15px;">
+        <p style="margin-left: 20px; font-size: xx-large;">TIMELY DELIVERY:</p>
+        <p style="margin-left: 20px; margin-top: 10px; font-size: x-large;">Lucky Construction understand the importance of deadlines and work efficiently to complete projects on schedule.</p>
+        <img style="width: 90%; margin-left: 75px; margin-top: 15px; background-color: rgba(0, 0, 0, 0.252); box-shadow: 0 0 20px rgba(0, 0, 0, 0.271)" src="about3.jpg" alt="#">
+
+    </div>
+
+    <div style="background-color: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.405); width: max(90%, 500px); margin: 80px auto; padding: 30px; border-radius: 15px;">
+        <p style="margin-left: 20px; font-size: xx-large;">CUSTOMER SACTISFACTION:</p>
+        <p style="margin-left: 20px; margin-top: 10px; font-size: x-large;">Lucky Construction prioritize clear communication and client satisfaction throughout every stage of construction.</p>
+        <img style="width: 90%; margin-left: 75px; margin-top: 15px; background-color: rgba(0, 0, 0, 0.252); box-shadow: 0 0 20px rgba(0, 0, 0, 0.271)" src="about15.jpg" alt="#">
+
+    </div>
+
+    <div style="margin-top: 50px; margin-left: 40%;" class="contact-meny">
+                <a style="text-decoration: none; color: #2563eb; font-size: larger; font-weight: 100; margin-top: +50px;" href="tel:+2348036998930"> <i class="fa-solid fa-phone"></i> Call Now</a>
+                <a style="text-decoration: none; color: #2563eb; font-size: larger; font-weight: 100; margin-top: +50px; margin-left: +20px;" href="mailto:luckyokungbowa66@gmail.com"> <i class="fa-solid fa-envelope"></i> Email Us</a>
+                <a style="text-decoration: none; color: #2563eb; font-size: larger; font-weight: 100; margin-top: +50px; margin-left: +20px;" href="https://wa.me/2348036998930" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+    <p style=" margin-left: 45%; margin-bottom: 15px; margin-top: 50px; margin-bottom: 50px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">&copy; 2026 Lucky Construction Ltd.</p>
+</div>
+
+
+
+
+</body>
+</html>
